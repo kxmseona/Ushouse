@@ -1,0 +1,452 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  
+  /* 링크 스타일 설정 */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Header Styles */
+  nav {
+    height: 70px;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  a img {
+    height: 50px;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-weight: bold;
+    justify-content: center;
+  }
+  
+  .menu li {
+    margin-left: 50px;
+  }
+  
+  .user {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .user li:first-child {
+    margin-right: 20px;
+  }
+  
+  /* 전체 영역 래핑 요소 */
+  .wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 게시판 영역 */
+  .community {
+    width: 45%;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: auto;
+  }
+  
+  /* 게시판 */
+  h2 {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  
+  /* Back button container */
+  .back-button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  /* Back button */
+  #back-button {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  #back-button i {
+    font-size: 25px;
+    color: #008080;
+  }
+  
+  /* Content 스타일 수정 */
+  .content {
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    outline: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    white-space: pre-wrap;
+  }
+  
+  /* 미리보기 컨테이너 */
+  .preview-arrow-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  /* 미리보기 항목 */
+  .preview-item {
+    width: 550px;
+    height: 400px;
+    margin: 5px;
+    overflow: hidden;
+  }
+  
+  .preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .arrow-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow-buttons button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  #prev-button {
+    position: absolute;
+    margin-left: 10px;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  #next-button {
+    position: absolute;
+    margin-right: 10px;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .arrow-buttons i {
+    font-size: 30px;
+    color: #008080;
+  }
+  
+  /* 추가한 스타일 */
+  .arrow-buttons button i {
+    vertical-align: middle;
+  }
+  
+  /* 화살표 버튼 위치 조정 */
+  .prev-button {
+    margin-right: 10px;
+  }
+  
+  .next-button {
+    margin-left: 10px;
+  }
+  
+  /* 추가된 스타일 */
+  .board-actions {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px;
+    padding: 20px;
+  }
+  
+  .chat-button {
+    width: 350px;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 40px;
+    background: #008080;
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  .heart-icon {
+    font-size: 30px;
+    color: #008080;
+  }
+  
+  .more-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+  
+  .more-icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    color: #008080;
+  }
+  
+  .more-options {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .more-options li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .more-options a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .more-options a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 스크롤 바 스타일링 */
+  ::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+  }
+  
+  /* 스크롤 바의 트랙 스타일링 (배경) */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  /* 스크롤 바의 스크롤된 부분 스타일링 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  /* 스크롤 버튼 스타일링 (스크롤 바 양쪽 끝에 있는 화살표) */
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  /* 스크롤 바의 트랙 스타일링 (배경) */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  /* 스크롤 바의 트랙 하단 선 숨김 */
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  
+
+  /*  ------------------------------------------------------- */
+
+
+
+
+  .comment {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    width: 600px; /* 너비 조정 */
+    list-style-type: none; /* 점 기호 없애기 */
+    position: relative; /* 위치 지정을 위해 상대적인 위치 설정 */
+  }
+  
+  .comments h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  #comment-form {
+    width: 600px;
+    height: auto;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  #comment-input {
+    width: 95%; /* 너비 조정 */
+    height: auto;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+    border: 5;
+  }
+  
+  
+  #comment-input:focus {
+    outline: none;
+  }
+  
+  #comment-form button {
+    width: 20%;
+    height: 50px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008080;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .comment .cmcontent {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .cmauthor {
+    font-weight: bold;
+}
+
+  .comment .reply-button {
+    font-size: 0.8em;
+    color: #008080;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .reply-button {
+    position: absolute; /* 절대적인 위치로 설정 */
+    top: 8px; /* 위쪽 여백 조정 */
+    right: 15px; /* 오른쪽 여백 조정 */
+  }
+  
+  .reply-comment {
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .reply-comment .cmcontent {
+    margin-top: 5px;
+  }
+  
+  .reply-comment .reply-button {
+    font-size: 0.8em;
+    color: #008080;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .reply-form {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .reply-form .reply-input {
+    flex: 1;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .reply-form .reply-input:focus {
+    outline: none;
+  }
+  
+  .reply-form .submit-reply {
+    width: 20%;
+    height: 30px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008080;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+  

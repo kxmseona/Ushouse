@@ -1,0 +1,267 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    }
+  
+  /* 링크 스타일 설정 */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* 전체 영역 래핑 요소 */
+  .wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    }
+  
+    /* Header Styles */
+  nav {
+    height: 70px;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  a img {
+    height: 50px;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-weight: bold;
+    justify-content: center; /* 가운데 정렬 */
+  }
+  
+  
+  .menu li {
+    margin-left: 50px;
+  }
+  
+  
+  .user {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* 가운데 정렬 */
+  }
+  
+  .user li:first-child {
+    margin-right: 20px;
+  }
+  
+  
+  
+  /* 게시판 영역 */
+  .community {
+    width: 45%;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 70px;
+  }
+  
+  
+  /* 제목 입력 영역 */
+  .community-title {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 추가: 수직 중앙 정렬 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  
+  /* 제목 입력 필드 */
+  .community-title input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  /* 내용 입력 영역 */
+  .community-content {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 추가: 수직 중앙 정렬 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 내용 입력 필드 */
+  .community-content textarea {
+    width: 100%;
+    height: 230px;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    outline: none;
+    box-sizing: border-box;
+    resize: none; /* 사용자의 크기 조정 금지 */
+  }  
+  
+  
+  
+  
+  /* 스크롤 바 스타일링 */
+  ::-webkit-scrollbar {
+    width: 8px; /* 스크롤 바의 너비 */
+    border-radius: 4px; /* 둥글게 디자인하기 위한 반지름 크기 */
+  }
+  
+  /* 스크롤 바의 트랙 스타일링 (배경) */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px; /* 트랙도 둥글게 디자인 */
+  }
+  
+  /* 스크롤 바의 스크롤된 부분 스타일링 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px; /* 스크롤된 부분도 둥글게 디자인 */
+  }
+  
+  /* 스크롤 버튼 스타일링 (스크롤 바 양쪽 끝에 있는 화살표) */
+  ::-webkit-scrollbar-button {
+    display: none; /* 스크롤 버튼 숨기기 */
+  }
+  
+  /* 스크롤 바의 트랙 스타일링 (배경) */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* 스크롤바 트랙 배경을 투명하게 설정 */
+  }
+  
+  /* 스크롤 바의 트랙 하단 선 숨김 */
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent; /* 스크롤바 트랙 하단 선을 투명하게 설정 */
+  }
+  
+  
+  .file-upload-container {
+    width: 89%;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .file-upload-container input[type="file"] {
+    display: none;
+  }
+  
+  .upload-info {
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+  }
+  
+  
+  .upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    margin-left: 70px;
+    margin-right: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .upload-button i {
+    font-size: 30px;
+  }
+  
+  
+  
+  .preview-container {
+    flex: 1;
+    height: 120px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .preview-item {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 100%;
+    margin-right: 10px;
+  }
+  
+  .preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .preview-item .delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+    cursor: pointer;
+  }
+  
+  
+  /* 제출 버튼 영역 */
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 제출 버튼 */
+  .submit input {
+    width: 60%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 40px;
+    background: #008080;
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+  }

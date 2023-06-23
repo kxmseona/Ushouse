@@ -1,0 +1,305 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 링크 스타일 설정 */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* Header Styles */
+nav {
+  height: 70px;
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+a img {
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  font-weight: bold;
+  justify-content: center; /* 가운데 정렬 */
+}
+
+
+.menu li {
+  margin-left: 50px;
+}
+
+
+.user {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* 가운데 정렬 */
+}
+
+.user li:first-child {
+  margin-right: 20px;
+}
+
+  #userEmail {
+  border: none; /* 박스 제거 */
+  background: transparent; /* 배경 투명화 */
+  font-size: 15px; /* 텍스트 크기 설정 */
+  text-align: right; /* 텍스트 오른쪽 정렬 */
+  margin-right: 5px;
+}
+
+
+/* 전체 영역 설정 */
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* 마이페이지 폼 영역 설정 */
+.mypage {
+  width: 30%;
+  height: 600px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto; /* 스크롤바 표시 설정 */
+  padding: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 70px; /* 메뉴바 아래에 위치하도록 설정 */
+}
+
+/* 제목 스타일 설정 */
+h2 {
+  color: #008080;
+  font-size: 2em;
+  margin-bottom: 35px;
+  margin-top: 30px;
+}
+
+/* 프로필 스타일 설정 */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px; /* 닉네임과 프로필 사진 사이 간격 설정 */
+}
+
+.profile-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.profile-image i.fas.fa-user {
+  font-size: 64px; /* 사용자 아이콘의 크기를 64픽셀로 설정 */
+  color: #008080;
+}
+
+
+
+/* 프로필 이미지 관련 스타일 설정 */
+.profile-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.profile-image-icon {
+  font-size: 64px; /* 아이콘 크기 설정 */
+  color: #008080;
+}
+
+.profile-image-input {
+  display: none;
+}
+
+/* 추가한 CSS 스타일 설정 */
+#nickname-input {
+  padding: 4px 8px;
+  margin-left: 8px;
+  width: 120px;
+}
+
+#confirm-btn {
+  margin-left: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+
+
+
+
+.edit-profile {
+  font-size: 0.7em;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.profile-nickname {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  min-width: 150px; /* 칸의 최소 너비를 지정하세요 */
+}
+
+.profile-nickname span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.change-nickname {
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+
+.nickname-warning {
+  margin-top: 8px;
+  font-size: 12px;
+  color: red;
+}
+
+#nickname-input,
+#confirm-btn {
+  display: none;
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* CSS 코드 */
+.profile-nickname.editing .change-nickname {
+  display: none;
+}
+
+#nickname-input {
+  padding: 8px;
+}
+
+#confirm-btn {
+  display: none;
+  margin-top: 5px;
+}
+
+.profile-nickname.editing #confirm-btn {
+  display: inline-block;
+}
+
+
+/* 메뉴 스타일 설정 */
+.mypage_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+
+.mypage_menu button,
+.logout-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.mypage_menu button:hover,
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+.mypage_menu button {
+  width: 100%;
+  height: 50px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+
+/* 반응형 스타일 */
+@media screen and (max-width: 480px) {
+  .mypage {
+      width: 100%;
+  }
+}

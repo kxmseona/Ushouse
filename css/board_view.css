@@ -1,0 +1,434 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 링크 스타일 설정 */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header Styles */
+nav {
+  height: 70px;
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+h2{
+	display:flex;
+	justify-content: center;
+	margin-bottom:20px;
+	
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a img {
+  height: 50px;
+}
+.img{
+	width: 400px;
+	height: 250px;
+}
+.imgcom{
+	margin-left:20px;
+	width: 400px;
+	height: 300px;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.menu li {
+  margin-left: 50px;
+}
+
+.user {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.user li:first-child {
+  margin-right: 20px;
+}
+
+#userEmail {
+  border: none; /* 박스 제거 */
+  background: transparent; /* 배경 투명화 */
+  font-size: 15px; /* 텍스트 크기 설정 */
+  text-align: right; /* 텍스트 오른쪽 정렬 */
+  margin-right: 5px;
+}
+
+/* 전체 영역 래핑 요소 */
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* 게시판 영역 */
+.board {
+  width: 60%;
+  height: 600px;
+  background-color: white;
+  border-radius: 20px;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-top: 70px;
+ 
+  position: relative;
+ 
+  
+}
+
+
+/* 게시판 */
+h2 {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/* Back button container */
+.back-button-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Back button */
+#back-button {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#back-button i {
+  font-size: 25px;
+  color: #008080;
+}
+
+/* 작성자 */
+.author {
+  text-align: center;
+}
+
+/* Content 스타일 수정 */
+.content {
+  width: 80%;
+  height: auto;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  outline: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+/* 상세 정보 */
+.details {
+  width: 45%;
+  height: 80px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+}
+.submit  {
+  width: 80%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: #008080;
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.deposit,
+.rent,
+.management-fee {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.deposit {
+  margin-right: 20px;
+}
+
+.rent {
+  margin-right: 20px;
+}
+
+/* 미리보기 컨테이너 */
+.preview-arrow-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* 미리보기 항목 */
+.preview-item {
+  width: 550px;
+  height: 400px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-buttons button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+#prev-button {
+  position: absolute;
+  margin-left: 10px;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#next-button {
+  position: absolute;
+  margin-right: 10px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.arrow-buttons i {
+  font-size: 30px;
+  color: #008080;
+}
+
+/* 추가한 스타일 */
+.arrow-buttons button i {
+  vertical-align: middle;
+}
+
+/* 화살표 버튼 위치 조정 */
+.prev-button {
+  margin-right: 10px;
+}
+
+.next-button {
+  margin-left: 10px;
+}
+
+/* 추가된 스타일 */
+.board-actions {
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 60px;
+  padding: 20px;
+}
+
+.chat-button {
+  width: 350px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: #008080;
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  position: relative;
+}
+
+.heart-icon {
+  font-size: 30px;
+  color: #008080;
+}
+
+.more-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.more-icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 25px;
+  color: #008080;
+}
+
+.more-options {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: white;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.more-options li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.more-options a {
+  color: black;
+  text-decoration: none;
+}
+
+.more-options a:hover {
+  text-decoration: underline;
+}
+
+
+/* 테이블 스타일 */
+table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* 가로로 나오는 셀 스타일 */
+th, td {
+  flex-basis: 50%;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 짝수 행 배경색 지정 */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* 헤더 셀 스타일 */
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* 세로로 나오는 셀 스타일 */
+td.content-cell {
+  flex-basis: 100%;
+}
+
+/* 이미지 스타일 */
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+
+
+/* 스크롤 바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* 스크롤 바의 트랙 스타일링 (배경) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* 스크롤 바의 스크롤된 부분 스타일링 */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* 스크롤 버튼 스타일링 (스크롤 바 양쪽 끝에 있는 화살표) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 스크롤 바의 트랙 스타일링 (배경) */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* 스크롤 바의 트랙 하단 선 숨김 */
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
